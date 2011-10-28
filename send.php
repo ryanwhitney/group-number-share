@@ -7,21 +7,22 @@
 	// Include the PHP TwilioRest library
 	require "Services/Twilio.php";
 	
-	// Set our AccountSid and AuthToken
+	// Set AccountSid and AuthToken
 	$AccountSid = "##############################";
 	$AuthToken = "###############################";
 	
 	// Instantiate a new Twilio Rest Client
 	$client = new Services_Twilio($AccountSid, $AuthToken);
 	
-	/* Your Twilio Number*/
+	// Twilio Number
 	$from= '2486314921';
-
+	
+	// Creates the message body
 	foreach ($names_numbers as $name => $number) {
 		$message .= "[".$name.": ".$number."]\n";
 	}
 
-	// Send out the messages to each number
+	// Send the message to each number
 	foreach ($names_numbers as $name => $to) {
 		$body = $message;
 		$client->account->sms_messages->create($from, $to, $body);
