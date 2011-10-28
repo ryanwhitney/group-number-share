@@ -1,0 +1,29 @@
+*{
+margin: 0;
+padding: 0;
+}
+body{
+background: #eee;
+font-size: 16px;
+font-family: Helvetica, Arial, sans-serif;
+}
+ul{
+	list-style: none;
+}
+ul input{
+
+	height: 30px;
+	font-size: 16px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	opacity: .6;
+	margin-right: 30px;
+	margin-top:  10px;
+}
+#main{
+	display: block;
+	margin: auto;
+	width: 600px;
+	margin-top: 50px;
+}
