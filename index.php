@@ -13,16 +13,20 @@
 	<![endif]-->
 </head>
 <body>
+	<header><h1>Easily share phone numbers between group members.</h1></header>
 	<section id="main">
-		<form action="send.php"  method="POST">
-			<ul>
-				<li>Name: <input type="text" name="name[]" /> Number: <input type="text" name="number[]" /></li>
-				<li>Name: <input type="text" name="name[]" /> Number: <input type="text" name="number[]" /></li>
-				<li>Name: <input type="text" name="name[]" /> Number: <input type="text" name="number[]" /></li>
-				<li>Name: <input type="text" name="name[]" /> Number: <input type="text" name="number[]" /></li>
-			</ul>
-			<input type="submit">
-		</form>
+		<div id="instructions"><img src="images/instructions.png" alt="Enter names, enter phone numbers, click send." width="484" height="25" /></div>
+		<div id="form1">
+			<form action="send.php"  method="POST">
+				<ul>
+					<li>Name: <input type="text" name="name[]" /> Phone Number: <input type="text" name="number[]" /></li>
+					<li>Name: <input type="text" name="name[]" /> Phone Number: <input type="text" name="number[]" /></li>
+					<li>Name: <input type="text" name="name[]" /> Phone Number: <input type="text" name="number[]" /></li>
+					<li>Name: <input type="text" name="name[]" /> Phone Number: <input type="text" name="number[]" /></li>
+				</ul>
+				<input type="submit">
+			</form>
+		</div>
 	</section>
 </body>
 </html>
