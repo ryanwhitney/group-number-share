@@ -41,6 +41,7 @@ input[type=submit]:active{
 	padding-left: 1px;
 	background-image: url(../images/button_submit.png);
 	background-position-y: -45px;
+	text-shadow: rgba(255, 255, 255, .8) 0px 0px 15px;
 }
 input[type=submit]:hover{
 	text-shadow: rgba(0, 0, 0, .4) 0px -1px 0px, rgba(255, 255, 255, .8) 0px 0px 15px;
