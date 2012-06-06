@@ -6,30 +6,71 @@
 }
 header{
 	display: block;
-	height: 24px;
+	height: 26px;
+	padding-top: 4px;
 	width: 100%;
 	background-color: black;
 }
-h1{
+h1 a{
 	display: block;
-	position: absolute;
-	left: 50%;
 	color: white;
 	font-size: 14px;
 	font-weight: 400;
-	margin-left: -175px;
 	margin-top: 3px;
+	text-align: center;
+	text-decoration: none;
 }
 body{
 	background: #194575 url(../images/blur.png) no-repeat center top;
 	font-family: Helvetica, Arial, sans-serif;
+}
+#size{
+	color: #5ade44;
+	font-weight: bold;
+	font-size: 20px;
+}
+#form1 p{
+ text-align: center;
+ padding: 20px 39px 15px 0;
+}
+#group-info{
+	position: relative;
+}
+
+#add{
+	color: #5ade44;
+	font-size: 12px;
+/*
+	position: absolute;
+	top: -10px;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-left: 7px solid transparent;
+	border-right: 7px solid transparent;
+	border-bottom: 7px solid #5ade44;
+	*/
+}
+#remove{
+	color: #5ade44;
+	font-size: 12px;
+/*
+	position: absolute;
+	top:20px;
+	left: 0;
+	width: 0;
+	height: 0;
+	border-left: 7px solid transparent;
+	border-right: 7px solid transparent;
+	border-top: 7px solid #5ade44;
+	*/
 }
 input[type=submit]{
 	float: right;
 	clear: none;
 	color: white;
 	font-size: 16px;
-	margin-right: 32px;
+	margin: 1px 70px 0px 0;
 	text-shadow: rgba(0, 0, 0, .6) 0px -1px 0px;
 	background: none;
 	background-image: url(../images/button_submit.png);
@@ -41,42 +82,78 @@ input[type=submit]:active{
 	padding-left: 1px;
 	background-image: url(../images/button_submit.png);
 	background-position-y: -45px;
-	text-shadow: rgba(255, 255, 255, .8) 0px 0px 15px;
 }
 input[type=submit]:hover{
 	text-shadow: rgba(0, 0, 0, .4) 0px -1px 0px, rgba(255, 255, 255, .8) 0px 0px 15px;
 }
-ul{
+table{
+	margin-top: 10px;
 	list-style: none;
 	font-size: 16px;
 	font-weight: 400;
 	letter-spacing: .5px;
 	color: white;
-	text-shadow: rgba(0, 0, 0, .9) 0px 0px 1px;
 }
-ul input{
+#back{
+	display: block;
+	font-size: 16px;
+	text-shadow: rgba(0, 0, 0, .6) 0px -1px 0px;
+	background: transparent url(../images/button_submit.png) no-repeat 0 0;
+	text-align: center;
+	height: 33px;
+	width: 145px;
+	padding-top: 14px;
+	margin: auto;
+	color: white;
+	text-decoration: none;
+}
+#back:hover{
+	text-shadow: rgba(0, 0, 0, .4) 0px -1px 0px, rgba(255, 255, 255, .8) 0px 0px 15px;
+}
+#back:active{
+	background-image: url(../images/button_submit.png);
+	background-position-y: -45px;
+	text-shadow: rgba(0, 0, 0, .4) 0px -1px 0px;
+	color: rgba(255,255,255,.9);
+}
+th{
+	font-weight: normal;
+}
+tbody tr th{
+	text-align: right;
+	padding-right: 20px;
+	opacity: .4;
+}
+#inputs tr:first-child th{
+	text-align: center;
+	padding-right: 20px;
+}
+table input{
 	height: 28px;
-	width: 158px;
-	font: 16px;
+	width: 200px;
+	font-size: 16px;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
-	margin: 10px 35px 11px 5px;
+	margin: 10px 0 11px 0;
 	-webkit-box-shadow: inset 0px 1px 5px rgba(0, 0, 0, 0.4);
     -moz-box-shadow: inset 0px 1px 5px rgba(0, 0, 0, 0.4);
     box-shadow: inset 0px 1px 5px rgba(0, 0, 0, 0.4);
 }
-
+td{
+	padding-right: 20px;
+}
 #main{
 	display: block;
 	margin: auto;
-	width: 610px;
-	margin-top: 100px;
+	width: 574px;
+	color: #fff;
+	margin-top: 35px;
+	position: relative;
 }
 #main #form1{
 	padding-bottom: 54px;
 	padding-left: 39px;
-	padding-top: 25px;
 	display: block;
 	margin: auto;
 	-webkit-border-radius: 5px;
@@ -92,7 +169,67 @@ ul input{
 	background: linear-gradient(top,  rgba(255,255,255,0.15) 0%,rgba(255,255,255,0.05) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#26ffffff', endColorstr='#0dffffff',GradientType=0 ); /* IE6-8 */
 }
-#instructions{
-	margin-left: 63px;
-	margin-bottom: 30px;
+#send-page #form1, #send-page p{
+	padding: 20px 0 30px 0;
 }
+#excuse{
+font-size: 13px;text-align: center; clear: both; margin-top: 20px;opacity:.78;
+}
+#signature{
+font-size: 13px;opacity:.4;text-align: center; clear: both; margin-top: 7px;padding:0 0 10px 0;
+}
+
+@-webkit-keyframes pulse {
+ 0% {
+    -webkit-transform: translateY(0px);
+ }
+ 10% {
+   -webkit-transform: translateY(-6px);
+ }
+ 20% {
+   -webkit-transform: translateY(0px);
+ }
+ 30% {
+   -webkit-transform: translateY(-6px);
+ }
+ 40% {
+   -webkit-transform: translateY(-0px);
+ }
+ 50% {
+   -webkit-transform: translateY(-6px);
+ }
+ 60% {
+   -webkit-transform: translateY(0px);
+ } 
+70% {
+   -webkit-transform: translateY(-6px);
+ }
+ 80% {
+   -webkit-transform: translateY(-0px);
+ }
+ 90% {
+   -webkit-transform: translateY(-6px);
+ }
+ 100% {
+   -webkit-transform: translateY(0px);
+ }
+}
+#instructions{
+
+ -webkit-transition: all 25 ease-in-out;
+ margin: 10px 0 45px -38px;
+width: 654px;
+height: 129px;
+background: url(../images/directions.png);
+z-index: 10000;
+
+}
+#instructions:hover{
+ -webkit-animation-name: pulse;
+ -webkit-animation-duration: 14s;
+ -webkit-animation-direction: alternate;
+ -webkit-animation-timing-function: ease-in-out;
+ -webkit-animation-iteration-count: infinite;
+ -webkit-animation-fillmode: both;
+}​
+
